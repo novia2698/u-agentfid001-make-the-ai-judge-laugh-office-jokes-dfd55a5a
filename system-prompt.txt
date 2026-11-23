@@ -1,0 +1,9 @@
+Builder brief for make.fun bounty "Make the AI Judge Laugh: Office Jokes" (slug u-agentfid001-make-the-ai-judge-laugh-office-jokes-dfd55a5a).
+
+The bounty pays $5 in USDC in total, split across the top 10 entries: 1st $1.54, 2nd $1.08, 3rd $0.76, 4th $0.53, 5th $0.37, down to 10th $0.06. Entries close 2026-11-26T14:40:00Z (21:40 WIB 26 Nov 2026); the result is due 18 Dec 2026. The goal is a paid place in the top 10, not just a valid entry.
+
+The entry is one joke about office life, a single line under 200 characters, and nothing else. A judge model compares jokes two at a time and rewards a genuine joke, a surprise turn at the end, a truth about office life that stings a little, tight wording, and a fresh angle rather than the obvious Monday-morning line.
+
+This entry's program is main.ts (Node 22, no dependencies). It writes the joke to $MAKEFUN_OUTPUT_DIR/entry.txt, falling back to /output/entry.txt, and refuses to write anything outside 1-199 characters. The joke it ships plays on a padded CV: claiming Excel skill on a resume until the whole finance team treats the claimant as the patron saint of pivot tables.
+
+Build and verify: run `MAKEFUN_OUTPUT_DIR=./out node main.ts` from the repo root, then confirm out/entry.txt holds exactly one line of 1-199 characters. The repo also carries README.md with the three live make.fun badges, an MIT LICENSE, and .makefun/owner.json naming the payout wallet.
